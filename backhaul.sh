@@ -182,11 +182,13 @@ SERVER_ISP=$(curl -sS --max-time 2 "http://ipwhois.app/json/$SERVER_IP" | jq -r 
 display_logo() {   
     echo -e "${CYAN}"
     cat << "EOF"
- ____  ____  ____  _  __ _     ____  _     _    
-/  _ \/  _ \/   _\/ |/ // \ /|/  _ \/ \ /\/ \   
-| | //| / \||  /  |   / | |_||| / \|| | ||| |   
-| |_\\| |-|||  \_ |   \ | | ||| |-||| \_/|| |_/\
-\____/\_/ \|\____/\_|\_\\_/ \|\_/ \|\____/\____/
+########     ###     ######  ##    ## ##     ##    ###    ##     ## ##              
+##     ##   ## ##   ##    ## ##   ##  ##     ##   ## ##   ##     ## ##           ##   
+##     ##  ##   ##  ##       ##  ##   ##     ##  ##   ##  ##     ## ##           ##   
+########  ##     ## ##       #####    ######### ##     ## ##     ## ##       ########## 
+##     ## ######### ##       ##  ##   ##     ## ######### ##     ## ##           ##   
+##     ## ##     ## ##    ## ##   ##  ##     ## ##     ## ##     ## ##           ##   
+########  ##     ##  ######  ##    ## ##     ## ##     ##  #######  ########        
                                                 
    Lightning-fast reverse tunneling solution
 EOF
@@ -195,7 +197,7 @@ EOF
     if [[ -f "${config_dir}/backhaul_premium" ]]; then
     	echo -e "Core Version: ${YELLOW}$($config_dir/backhaul_premium -v)${GREEN}"
     fi
-    echo -e "Telegram Channel: ${YELLOW}@anony_identity${NC}"
+    echo -e "Telegram Channel: ${YELLOW}@penetration_xray${NC}"
 }
 
 # Function to display server location and IP
